@@ -35,4 +35,4 @@ def book(request, flight_id):
         passenger.flights.add(flight)
 
         # Redirect user to flight page
-        return redirect("flight", args=(flight.id,))
+        return redirect("flight", flight_id=flight.id)
